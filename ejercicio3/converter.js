@@ -17,7 +17,7 @@ class CurrencyConverter {
             const data = await response.json();
             this.currencies = Object.keys(data).map(code => new Currency(code, data[code]));
         } catch (error) {
-            console.error("Error fetching currencies:", error);
+            console.error("Error al obtener la diferencia de tarifas:", error);
         }
     }
 
@@ -30,7 +30,7 @@ class CurrencyConverter {
             const data = await response.json();
             return data.rates[toCurrency.code];
         } catch (error) {
-            console.error("Error converting currency:", error);
+            console.error("Error al convertir moneda:", error);
             return null;
         }
     }
@@ -53,7 +53,7 @@ class CurrencyConverter {
 
             return todayRate - yesterdayRate;
         } catch (error) {
-            console.error("Error fetching rate difference:", error);
+            console.error("Error al obtener la diferencia de tarifas:", error);
             return null;
         }
     }
