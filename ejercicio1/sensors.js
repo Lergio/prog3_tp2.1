@@ -21,7 +21,7 @@ class Sensor {
     }
 
     set type(newType) {
-        const validTypes = ['temperatura', 'humedad', 'presion'];
+        const validTypes = ['temperature', 'humedity', 'pressure'];
         if (validTypes.includes(newType)) {
             this._type = newType;
         } else {
@@ -31,7 +31,7 @@ class Sensor {
 
     // Método estático para obtener los tipos válidos de sensores
     static validTypes() {
-        return ['temperatura', 'humedad', 'presion'];
+        return ['temperature', 'humedity', 'pressure'];
     }
 }
 
